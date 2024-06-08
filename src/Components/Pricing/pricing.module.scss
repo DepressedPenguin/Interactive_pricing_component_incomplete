@@ -1,0 +1,249 @@
+// .SCSS FILE FOR PRICING COMPONENT
+.main_pricing {
+  width: 35%;
+  height: 300px;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px grey;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3px;
+  padding: 5px;
+}
+
+// PRICING BOX
+.pricing_box {
+  border: 2px solid plum;
+}
+
+// PRICE AND PAGE VIEWS
+.price_and_pageviews {
+  // border: 2px solid plum;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+// PAGE VIEW
+.page_view {
+  // border: 1px solid darkcyan;
+
+  p {
+    font-size: 13px;
+    font-weight: 900;
+    font-style: bold;
+    color: grey;
+    letter-spacing: 1px;
+  }
+}
+
+.price_per_month {
+  font-size: 30px;
+  position: relative;
+
+  p {
+    font-weight: 900;
+  }
+}
+
+.month_span {
+  font-size: 13px;
+  font-weight: 600;
+  width: 100px;
+  color: grey;
+  top: 10px;
+  // border: 1px solid red;
+  position: absolute;
+}
+// SLIDER OR SPINER
+.slider_or_spiner {
+  // border: 1px solid darkcyan;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// SLIDER WIDTH
+.slider {
+  width: 80%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: rgb(162 243 235);
+  box-shadow: 3px 3px 3px rgb(162 243 235);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+// SLIDER POINT INSIDE
+// background-image: url("../../assets/images/icon-slider.svg");
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(17 215 200);
+  box-shadow: 1px 1px 20px rgb(17 215 200);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+// montly_biling
+.montly_biling {
+  // border: 1px solid plum;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .monthly_p {
+    font-weight: 700;
+    color: grey;
+    font-size: 13px;
+  }
+}
+
+// DISCOUNT <P>
+.discount_p {
+  background-color: rgb(255 234 232);
+  color: rgb(230, 116, 78);
+  border-radius: 10px;
+  padding: 4px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+// my_trial
+.my_trial {
+  // border: 1px solid plum;
+  border-top: 1px solid wheat;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+// SWITCHER PLACE
+.switcher_checkbox {
+  display: none;
+}
+
+// SWITCHER
+.switcher {
+  position: relative;
+  height: 20px;
+  width: 45px;
+  display: inline-block;
+  // background-color: #191919;
+  border-radius: 30px;
+}
+
+// Point ground
+.point {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(209 215 241);
+  // border: 1px solid rgb(209 215 241);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.point::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: 26px;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(150, 181, 255);
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+input:checked + .point::before {
+  transform: translateX(-26px);
+  background-color: rgb(109, 87, 87);
+}
+
+input:checked + .point {
+  background-color: whitesmoke;
+}
+
+.ul_features {
+  list-style-type: none;
+
+  .li_features {
+    font-weight: 600;
+    color: grey;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.li_features::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+
+  background-image: url("/src/assets/images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.btn_trial {
+  // border: 1px solid red;
+
+  button {
+    // padding: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(41 51 86);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .main_pricing {
+    width: 75%;
+  }
+
+  .price_per_month {
+    font-size: 25px;
+  }
+
+  .month_span {
+    font-size: 10px;
+  }
+}
+
+// @media only screen and (min-width: 500px) {
+//   .main_pricing {
+//     width: 75%;
+//     border: 1px solid red;
+//   }
+
+//   .price_per_month {
+//     font-size: 25px;
+//   }
+
+//   .month_span {
+//     font-size: 10px;
+//   }
+// }
